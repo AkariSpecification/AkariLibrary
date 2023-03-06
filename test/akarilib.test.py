@@ -1,7 +1,7 @@
 # unittest for akarilib.test.py
 
 import unittest
-from akarilib import akarilib
+import akarilib
 
 class TestAkariLib(unittest.TestCase):
     # exist method
