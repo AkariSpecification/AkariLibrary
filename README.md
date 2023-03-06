@@ -3,7 +3,7 @@ AkariLib - AkariSpecification's Python Lib for HPC
 
 ## Installation
 ```bash
-pip install akarilib
+pip install git+https://github.com/AkariSpecification/AkariLibrary
 ```
 
 ## Usage
