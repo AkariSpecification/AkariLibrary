@@ -11,7 +11,7 @@ pip install git+https://github.com/AkariSpecification/AkariLibrary
 from akarilib import akarilib
 
 # SSH Connection
-connection = akarilib.rsaConnection("hostname","username", "id_rsa.pub")
+connection = akarilib.rsaConnection("hostname","username", "id_rsa")
 
 # SSH Command Execution
 result = akarilib.run(connection, "ls -l")
@@ -42,7 +42,7 @@ result = akarilib.run(connection, "./hello")
 print(result)
 
 # Close SSH Connection
-akarilib.close(connection)
+akarilib.disconnect(connection)
 ```
 
 ## License
