@@ -14,8 +14,7 @@ from akarilib import akarilib
 connection = akarilib.rsaConnection("hostname","username", "id_rsa")
 
 # SSH Command Execution
-result = akarilib.run(connection, "ls -l")
-print(result)
+akarilib.run(connection, "ls -l")
 
 # SSH File Transfer
 akarilib.put(connection, "local_file", "remote_file")
@@ -31,15 +30,11 @@ akarilib.getFiles(connection, "remote_dir", "local_dir")
 
 # Example
 # Execute GCC Compile in Remote Host
-result = put(connection, "/home/localuser/hello.c", "/home/remoteuser/hello.c")
-print(result)
-result = akarilib.run(connection, "cd /home/remoteuser/")
-print(result)
-result = akarilib.run(connection, "gcc -o hello hello.c")
-print(result)
+akarilib.put(connection, "/home/localuser/hello.c", "/home/remoteuser/hello.c")
+akarilib.run(connection, "cd /home/remoteuser/")
+akarilib.run(connection, "gcc -o hello hello.c")
 # Run Remote Host's Executable File
 result = akarilib.run(connection, "./hello")
-print(result)
 
 # Close SSH Connection
 akarilib.disconnect(connection)
